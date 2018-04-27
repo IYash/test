@@ -33,7 +33,7 @@ public class MaximumContinue {
         Set s = new HashSet<>();//set的contain操作时间复杂度O(1)
        for(int i:source) s.add(i);
         int maxLen = 1;
-        for(int i:source){
+        for(int i:source){//这个思路存在一个问题，就是重复统计
             int cLen = 0;
             cLen = getCurrentMaxCon(s,i,cLen);
             if (cLen > maxLen) maxLen = cLen;
