@@ -3,7 +3,7 @@ package com.test.generic;
 /**
  * @author huangchangling on 2017/9/4 0004
  */
-class Employee extends People {
+public class Employee extends People {
     private String ename;
     private int eage;
     public static String canSee = "see";
