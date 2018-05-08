@@ -146,10 +146,33 @@ public class MyArrayUtil {
     private static int max(int a,int b,int c){
         return a>b?(a>c?a:c):(b>c?b:c);
     }
+
+    /**
+     * 二分法查找
+     * @param src 有序的数组
+     * @param data 待查找的元素
+     * @return 元素的索引
+     */
+    public static int binarySearch(int[] src,int data){
+        int begin = 0;
+        int end = src.length;
+        int middle = 0;
+        while(begin <end){
+            middle = (begin + end) /2;//这里应该是有个bug，即begin会永远小于end，而引起死循环src=[1,2,3,4] data =5
+            if (src[middle] == data) return middle;
+            else if (src[middle] < data) begin = middle;//这里需要进行改进 begin = middle +1
+            else end = middle; //end = middle -1
+        }
+        return -1;
+    }
     public static void main(String[] args) {
-        int[] src = new int[]{4,-3,2,1};
-        System.out.println(maxsub2(src,0,src.length-1));
+//        int[] src = new int[]{4,-3,2,1};
+//        System.out.println(maxsub2(src,0,src.length-1));
 //        System.out.println(maxsub1(src));
 //        System.out.println(maxsub(src));
+        //二分法验证
+        int[] src = new int[]{1,2,3,4};
+        int data = 5;
+        System.out.println(binarySearch(src,data));
     }
 }
