@@ -28,4 +28,36 @@ public class MathFun {
         else
         return power(under*under,upper/2)*under;
     }
+
+    /**
+     * 输入数字打印，顺序打印
+     * 例如：12345
+     * 结果为12345
+     * 考虑的时候可以参考把输入拆解出来一级一级考虑
+     * @param n
+     */
+    public static void printDigit(int n){
+        if(n >=10)
+            printDigit(n/10);
+        System.out.println(n%10);
+    }
+
+    /**
+     * 逆序打印
+     * 例如12345
+     * 结果为 54321
+     * @param n
+     */
+    public static void printDigitRev(int n){
+        while(n>=10){
+            System.out.println(n%10);
+            n /=10;
+        }
+        System.out.println(n);
+    }
+
+    public static void main(String[] args) {
+        printDigit(12345);
+        printDigitRev(12345);
+    }
 }
