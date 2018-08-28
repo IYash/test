@@ -18,6 +18,12 @@ public class DateUtil {
         String f = sdf.format(new Date());
         System.out.println(f);
     }
+
+    @Test
+    public void testDate2(){
+        Long time  = new Date().getTime();
+        System.out.println(DateUtils.yyyyMMdd.format(org.apache.commons.lang3.time.DateUtils.addDays(new Date(time), -1)));
+    }
     @Test
     public void testDate(){
        Date date = null;//DateUtils.getFirstDayOfNextMonth(new Date())
