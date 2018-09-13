@@ -7,6 +7,9 @@ import com.rop.session.SimpleSession;
 
 /**
  * @author huangchangling on 2017/6/13 0013
+ * http://localhost:8080/router?method=user.getSession&v=1.0&appKey=00001&sign=abcdefg&format=json
+ * 模拟的访问方式，开启sign检验的话需要重新计算sign，默认是对所有参数进行Sha1加密
+ * 可以自定义这部分
  */
 @ServiceMethodBean
 public class UserService {
