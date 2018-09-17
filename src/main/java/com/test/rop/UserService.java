@@ -4,6 +4,7 @@ import com.rop.annotation.NeedInSessionType;
 import com.rop.annotation.ServiceMethod;
 import com.rop.annotation.ServiceMethodBean;
 import com.rop.session.SimpleSession;
+import org.springframework.http.HttpRequest;
 
 /**
  * @author huangchangling on 2017/6/13 0013

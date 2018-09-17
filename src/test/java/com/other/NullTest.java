@@ -12,4 +12,9 @@ public class NullTest {
         String tar = src;
         System.out.println(tar);
     }
+    @Test
+    public void testOut(){
+        Integer max = Integer.MAX_VALUE;
+        System.out.println(max*100);
+    }
 }
