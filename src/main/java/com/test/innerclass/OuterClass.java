@@ -17,7 +17,7 @@ public class OuterClass {
     public static String getSouter(){
         return souter;
     }
-    class InnerClass{
+    public class InnerClass{
 
         private String inner = "inner";
 
@@ -29,7 +29,7 @@ public class OuterClass {
         }
     }
 
-    static class SInnerClass{
+    public static class SInnerClass{
 
         private static String sinner = "sinner";
 
@@ -43,8 +43,13 @@ public class OuterClass {
             sinner = newString;
         }
     }
-
+    public InnerClass buildInnerClass(){
+        new OuterClass.InnerClass();
+        new OuterClass.SInnerClass();
+        return new InnerClass();
+    }
     public static void main(String[] args) {
+        new OuterClass.SInnerClass();
         System.out.println("heel");
     }
 }
